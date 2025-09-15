@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Mermaid Diagram Generator</title>
+
+    <!-- Security Headers (Note: X-Frame-Options and frame-ancestors should be set via HTTP headers for better security) -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://esm.sh https://aistudiocdn.com https://cdn.tailwindcss.com https://cdnjs.cloudflare.com blob:; style-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; img-src 'self' data: https: blob:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://ai.google.dev https://generativelanguage.googleapis.com https://*.googleapis.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; worker-src 'self' blob:; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'" />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
+    <meta name="permissions-policy" content="camera=(), microphone=(), geolocation=(), gyroscope=(), magnetometer=(), payment=(), usb=()" />
+
+    <!-- External Scripts and Styles -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <style>
+      /* Custom scrollbar for a more integrated look in dark mode */
+      textarea::-webkit-scrollbar,
+      .monaco-editor .scrollbar {
+        width: 8px !important;
+      }
+      textarea::-webkit-scrollbar-track,
+      .monaco-editor .scrollbar .slider {
+        background: #1f2937 !important; /* bg-gray-800 */
+      }
+      textarea::-webkit-scrollbar-thumb,
+      .monaco-editor .scrollbar .slider {
+        background-color: #4b5563 !important; /* bg-gray-600 */
+        border-radius: 4px;
+        border: 2px solid #1f2937 !important; /* bg-gray-800 */
+      }
+      textarea::-webkit-scrollbar-thumb:hover,
+      .monaco-editor .scrollbar .slider:hover {
+        background-color: #6b7280 !important; /* bg-gray-500 */
+      }
+      /* Styles for clickable icons in the preview pane */
+      .clickable-icon {
+        cursor: pointer;
+        transition: filter 0.2s ease-in-out;
+      }
+      .clickable-icon:hover {
+        filter: drop-shadow(0 0 5px rgba(56, 189, 248, 0.8)); /* A nice cyan glow */
+      }
+      /* Styles for clickable text in the preview pane */
+      .clickable-text {
+        cursor: pointer;
+        transition: fill 0.2s ease-in-out;
+      }
+      .clickable-text:hover {
+        fill: #22d3ee; /* cyan-400 */
+      }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@18.2.0",
+    "react-dom/client": "https://esm.sh/react-dom@18.2.0/client",
+    "@google/genai": "https://esm.run/@google/genai",
+    "lodash": "https://esm.sh/lodash@4.17.21",
+    "zustand": "https://esm.sh/zustand@4.5.2",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-gray-900 text-gray-100 font-sans">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>

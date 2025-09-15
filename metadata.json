@@ -1,0 +1,5 @@
+{
+  "name": "Mermaid Diagram Generator",
+  "description": "An AI-supercharged Mermaid diagram generator for professionals. Instantly create and refine complex diagrams from natural language prompts using the Gemini API. Features a powerful live editor, an interactive real-time preview with click-to-edit for text and icons, an extensive template library, custom icon set management, and multiple export options (SVG, PNG, PDF) to accelerate your documentation and design workflows.",
+  "requestFramePermissions": []
+}

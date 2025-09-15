@@ -1,0 +1,66 @@
+/* Perfect Scrollbar Custom Styles for Dark Theme */
+.perfect-scrollbar-container .ps__rail-x {
+  background-color: rgba(55, 65, 81, 0.5) !important;
+  border-radius: 4px !important;
+  height: 8px !important;
+  bottom: 4px !important;
+}
+
+.perfect-scrollbar-container .ps__rail-x:hover {
+  background-color: rgba(75, 85, 99, 0.7) !important;
+}
+
+.perfect-scrollbar-container .ps__rail-y {
+  background-color: rgba(55, 65, 81, 0.5) !important;
+  border-radius: 4px !important;
+  width: 8px !important;
+  right: 4px !important;
+}
+
+.perfect-scrollbar-container .ps__rail-y:hover {
+  background-color: rgba(75, 85, 99, 0.7) !important;
+}
+
+.perfect-scrollbar-container .ps__thumb-x {
+  background-color: rgba(156, 163, 175, 0.8) !important;
+  border-radius: 4px !important;
+  height: 100% !important;
+  transition: background-color 0.2s ease !important;
+}
+
+.perfect-scrollbar-container .ps__thumb-x:hover,
+.perfect-scrollbar-container .ps__thumb-x:focus {
+  background-color: rgba(209, 213, 219, 0.9) !important;
+}
+
+.perfect-scrollbar-container .ps__thumb-y {
+  background-color: rgba(156, 163, 175, 0.8) !important;
+  border-radius: 4px !important;
+  width: 100% !important;
+  transition: background-color 0.2s ease !important;
+}
+
+.perfect-scrollbar-container .ps__thumb-y:hover,
+.perfect-scrollbar-container .ps__thumb-y:focus {
+  background-color: rgba(209, 213, 219, 0.9) !important;
+}
+
+/* Hide scrollbars when not hovering over the container */
+.perfect-scrollbar-container:not(:hover) .ps__thumb-x {
+  opacity: 0.3 !important;
+}
+
+.perfect-scrollbar-container:not(:hover) .ps__thumb-y {
+  opacity: 0.3 !important;
+}
+
+/* Ensure content can scroll */
+.perfect-scrollbar-container > div {
+  overflow: visible !important;
+}
+
+/* Ensure SVG content can be scrolled */
+.perfect-scrollbar-container svg {
+  max-width: none !important;
+  max-height: none !important;
+}

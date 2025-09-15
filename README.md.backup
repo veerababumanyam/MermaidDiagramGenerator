@@ -1,0 +1,55 @@
+# Mermaid Diagram Generator (AI-Powered)
+
+This is a professional-grade, AI-supercharged Mermaid diagram generator designed for developers, architects, and technical professionals. It leverages the power of the Gemini API to instantly create and refine complex diagrams from natural language prompts, dramatically accelerating documentation and design workflows.
+
+The application combines a powerful live code editor with an interactive real-time preview, allowing for seamless transitions between code-based precision and visual feedback.
+
+
+## Core Features
+
+### 1. AI-Powered Diagramming (Gemini API)
+- **Generate from Prompt**: Describe a diagram in plain English (e.g., "a kubernetes deployment with an ingress, service, and three pods") and watch the AI generate the complete Mermaid code.
+- **AI Co-pilot Chat**: Open a chat panel to interactively refine your diagram. Ask the AI to "add a database," "change the layout to top-to-bottom," or "connect the web servers to the load balancer," and see the diagram update in real-time.
+- **Intelligent Code Formatting**: Automatically clean up, indent, and validate your Mermaid code with a single click, ensuring it's both readable and syntactically correct.
+
+### 2. Advanced Editor & Live Preview
+- **Professional Code Editor**: Powered by Monaco (the engine behind VS Code), the editor provides syntax highlighting, auto-layout, and a fluid typing experience.
+- **Real-Time Rendering**: The preview panel instantly renders any changes you make to the code.
+- **Interactive SVG Preview**:
+    - **Click-to-Edit Text**: Click directly on any text label in the rendered diagram to open a modal and edit its content.
+    - **Click-to-Change-Icon**: Click on an icon within a node to bring up the Icon Picker and instantly swap it.
+- **Resizable Layout**: A draggable divider allows you to adjust the editor and preview panel sizes to your preference.
+- **Zoom Controls**: Easily zoom in, zoom out, and reset the view of the diagram preview.
+
+### 3. Version History & Sharing
+- **Undo/Redo**: Full version history support allows you to step backward and forward through your code changes with confidence.
+- **Shareable URLs**: Generate a unique URL that encodes your diagram's code, theme, and settings. Share it with colleagues to let them view and edit your work instantly.
+
+### 4. Extensive Customization
+- **Rich Template Library**: Start quickly with a wide range of professional templates, including AWS, Cisco, Kubernetes architectures, flowcharts, sequence diagrams, and more.
+- **Theming and Styling**: Choose from multiple built-in themes (e.g., Dark, Light, Forest, Professional Blue) and select different font families to match your documentation's style.
+- **Custom Icon Management**:
+    - **Multiple Icon Sets**: Built-in support for icon sets from major vendors like AWS, Azure, Cisco, Google Cloud, and Kubernetes.
+    - **Upload Custom Icons**: Upload your own SVG or PNG files to create new icon sets or add to existing ones.
+    - **Folder Scanning**: Select an entire folder to bulk-upload all supported image files within it.
+    - **Searchable Icon Picker**: A powerful, searchable modal allows you to filter and find the perfect icon from any loaded set.
+
+### 5. Multiple Export Options
+- **SVG**: Export a clean, scalable vector graphic of your diagram.
+- **PNG**: Export a high-resolution, transparent PNG image, perfect for presentations and documents.
+- **PDF**: Export a professional, print-ready PDF document.
+
+## How It Works
+
+The application is built as a modern, single-page application that runs entirely in the browser. It uses the Mermaid.js library for rendering diagrams and integrates with the Google Gemini API for its intelligent features. All diagram code, settings, and custom icons are persisted in the browser's local storage, so your work is saved between sessions.
+
+### Technology Stack
+- **Frontend**: React with TypeScript
+- **State Management**: Zustand
+- **AI Integration**: Google Gemini API (`@google/genai`)
+- **Diagram Rendering**: Mermaid.js
+- **Code Editor**: Monaco Editor
+- **Styling**: Tailwind CSS
+- **Utilities**: Lodash
+
+This combination of technologies provides a robust, performant, and highly interactive user experience, making it a best-in-class tool for creating and managing technical diagrams.
